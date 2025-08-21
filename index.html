@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>จองรถพร้อมคนขับ - พัทยา</title>
+</head>
+<body>
+  <h1>ระบบจองรถพร้อมคนขับ (พัทยา)</h1>
+  <form id="bookingForm">
+    <label>ชื่อ: <input name="customer_name" required></label><br>
+    <label>เบอร์โทร: <input name="customer_phone" required></label><br>
+    <label>จุดรับ: <input name="pickup_address" required></label><br>
+    <label>จุดส่ง: <input name="dropoff_address" required></label><br>
+    <label>วันเวลาไปรับ: <input type="datetime-local" name="pickup_datetime" required></label><br>
+    <label>จำนวนชั่วโมง: <input type="number" name="duration_hours" required></label><br>
+    <label>ประเภทรถ:
+      <select name="vehicle_type">
+        <option value="taxi">Taxi</option>
+        <option value="executive">Executive</option>
+        <option value="van">Van</option>
+      </select>
+    </label><br>
+    <label>หมายเหตุ: <textarea name="notes"></textarea></label><br>
+    <button type="submit">จอง</button>
+  </form>
+
+  <h2>ผลลัพธ์</h2>
+  <pre id="result"></pre>
+
+  <script src="script.js"></script>
+</body>
+</html>
